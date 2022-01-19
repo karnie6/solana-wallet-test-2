@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "@solana/wallet-adapter-base": "^0.8.1",
+    "@solana/wallet-adapter-vue": "^0.4.4",
+    "@solana/wallet-adapter-vue-ui": "^0.2.3",
+    "@solana/wallet-adapter-wallets": "^0.13.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.18.0",
