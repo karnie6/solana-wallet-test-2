@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import { initWallet } from 'solana-wallets-vue';
+import { WalletAdapterNetwork } from "@solana/wallet-adapter-base"
+
 
 import SolanaWallets from 'solana-wallets-vue';
 
@@ -17,15 +19,15 @@ const walletOptions = {
     wallets: [
       new PhantomWalletAdapter(),
       new SlopeWalletAdapter(),
-  //    new SolflareWalletAdapter({ network: 'devnet' }),
+      new SolflareWalletAdapter({ network: WalletAdapterNetwork.Devnet}),
     ],
     autoConnect: true,
   }
 
-initWallet(walletOptions);
+//initWallet(walletOptions);
 
 createApp(App)
-//.use(SolanaWallets, walletOptions)
+.use(SolanaWallets, walletOptions)
 .mount('#app');
 
 
